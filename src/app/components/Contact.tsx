@@ -74,7 +74,7 @@ export default function Contact() {
           height={700}
         ></Image>
       </div>
-      <div className="flex flex-col w-full md:max-w-[50vw] ">
+      <div className="flex flex-col md:flex-row w-full md:max-w-[50vw] ">
         <Category>
           <IoMdMail className="size-8" />
         </Category>
