@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-const lato = Lato({subsets:['latin'], weight:['300']});
+const lato = Lato({subsets:['latin'], weight:['300','400','700','900']});
 
 export const metadata: Metadata = {
   title: "PFLEXH Arquitetura",
@@ -18,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={lato.className}>
         <Navbar />
-        <main className="mx-auto">{children}</main>
+        <main>{children}</main>
         <Contact />
         <Footer />
       </body>
