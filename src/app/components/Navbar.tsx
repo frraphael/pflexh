@@ -12,7 +12,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className='mx-auto flex z-20'>
+    <nav className='mx-auto flex z-10'>
         <div className='bg-red-700 p-2 rounded-br-xl md:p-4 md:rounded-br-3xl'>
             <h1 className='text-2xl font-black tracking-widest md:text-3xl'>PFLEXH</h1>
             <h2 className='text-nowrap text-xs md:text-lg'>Projetos Flexíveis Humanizados</h2>
