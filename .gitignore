@@ -44,4 +44,4 @@ __screenshots__/
 Thumbs.db
 
 # Environments
-*.environment.ts
+src/app/environment/environment.ts
