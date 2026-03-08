@@ -1,0 +1,23 @@
+<div class="bg-red-900 px-12 lg:px-48 py-8 text-white">
+    <p class="bg-red-700 p-4 text-2xl font-black mb-2 shadow-md rounded-lg lg:inline-block">PFlexH</p>
+    <p class="mb-4">Projetando sonhos que duram para sempre!</p>
+  <div class="flex flex-col gap-2 mb-4">
+    <span>
+      <fa-icon [icon]="['fas', 'phone']" class="text-red-500" />
+      +55 (11) 91354-8490
+    </span>
+    <span>
+      <fa-icon [icon]="['fas', 'envelope']" class="text-red-500" />
+      pflexh@gmail.com
+    </span>
+  </div>
+  <p class="mb-2">Siga-nos:</p>
+  <div class="flex gap-4 mb-4">
+    @for (f of follows; track $index) {
+      <a class="bg-red-700 text-xl p-2 rounded-br-xl cursor-pointer" [href]="f.link">
+        <fa-icon [icon]="['fab', f.icon]" />
+      </a>
+    }
+  </div>
+  <p class="text-xs text-center">{{ getCopyright() }}</p>
+</div>

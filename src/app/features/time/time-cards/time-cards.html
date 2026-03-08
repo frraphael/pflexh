@@ -1,0 +1,9 @@
+<div class="lg:flex justify-around">
+@for (c of cards; track $index) {
+    <div class="flex flex-col justify-center items-center mb-4">
+        <img [src]="c.image" class="h-56 w-56 object-cover mb-1 time-foto" [class]="{'cursor-pointer': c.modalText}" (click)="openDialog(c.modalText)">
+        <p class="text-lg font-medium text-red-700 mb-1">{{c.name}}</p>
+        <p class="">{{c.role}}</p>
+    </div>
+}
+</div>

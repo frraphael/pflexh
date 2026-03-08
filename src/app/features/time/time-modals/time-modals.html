@@ -1,0 +1,15 @@
+<div class="p-4">
+  <h2 mat-dialog-title>{{data.modalText.full_name}}</h2>
+  <hr class="text-gray-300" />
+  <mat-dialog-content>
+    <div class="text-lg font-medium">
+      <p class="mb-1">Graduada em: {{ data.modalText.education }}</p>
+      <p class="text-xs mb-2">Conclusão: {{ data.modalText.education_year }}</p>
+      @if (data.modalText.post_education) {
+        <hr class="text-gray-200" />
+        <p class="mb-1">Pós-Graduada em: {{ data.modalText.post_education }}</p>
+        <p class="text-xs mb-2">Conclusão: {{ data.modalText.post_education_year }}</p>
+      }
+    </div>
+  </mat-dialog-content>
+</div>

@@ -1,0 +1,45 @@
+<div class="absolute top-0 left-0 z-50 w-full">
+  @if (isHandset$ | async) {
+    <img
+      src="/icons/menu.svg"
+      alt="Icone de menu"
+      (click)="menuToggle()"
+      class="w-10 mt-2 ms-2 brightness-0"
+    />
+
+    <div
+      class="fixed top-0 overflow-y-hidden h-[100vh] w-[70vw] bg-white/90 transform transition-transform duration-800 ease-in-out"
+      [class.-translate-x-full]="!isMenuOpen()"
+      [class.translate-x-0]="isMenuOpen()"
+    >
+      <img
+        src="/icons/menu.svg"
+        alt="Icone de menu"
+        (click)="menuToggle()"
+        class="w-10 mt-2 ms-2 brightness-0"
+      />
+      <div class="h-full w-full text-lg text-red-700 font-bold flex flex-col items-center gap-12">
+        <a href="#projects" (click)="menuToggle()">PROJETOS</a>
+        <a href="#partners" (click)="menuToggle()">PARCEIROS</a>
+        <a href="#about" (click)="menuToggle()">SOBRE</a>
+        <a href="#team" (click)="menuToggle()">EQUIPE</a>
+        <a href="#contact" (click)="menuToggle()">CONTATO</a>
+        <a href="#footer" (click)="menuToggle()">MAIS</a>
+      </div>
+    </div>
+  }
+
+  @if (!(isHandset$ | async)) {
+    <div class="flex items-center">
+      <span><img src="/logo.png" alt="Logo PFlexH" class="w-12" /></span>
+      <div class="flex justify-around w-full font-bold text-sm text-shadow-lg/30 text-white">
+        <a href="#projects">PROJETOS</a>
+        <a href="#partners">PARCEIROS</a>
+        <a href="#about">SOBRE</a>
+        <a href="#team">EQUIPE</a>
+        <a href="#contact">CONTATO</a>
+        <a href="#footer">MAIS</a>
+      </div>
+    </div>
+  }
+</div>

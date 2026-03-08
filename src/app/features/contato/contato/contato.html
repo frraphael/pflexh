@@ -1,0 +1,18 @@
+<div class="lg:flex">
+  <div class="bg-white lg:w-[50%]">
+    <img
+      src="/contato.png"
+      alt="Amigas"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="bg-red-700 lg:w-[50%]">
+    <div class="absolute bg-white p-4 rounded-br-xl">
+      <fa-icon [icon]="['far', 'envelope']" class="text-4xl text-red-700" />
+    </div>
+    <div class="pt-24 px-8 text-white">
+      <h2 class="mb-6 text-lg font-semibold">ENTRE EM CONTATO</h2>
+      <app-contato-form />
+    </div>
+  </div>
+</div>
