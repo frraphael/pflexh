@@ -85,7 +85,7 @@ export class ContatoForm implements OnInit {
     const formData: ContactForm = this.contactForm.value;
     console.log(formData);
     try {
-      const result = await this.emailService.sendContactEmail(formData);
+      const result = await this.emailService.sendFullContact(formData);
 
       this.submitStatus.set(result.success ? 'success' : 'error');
       this.statusMessage = result.message;

@@ -62,9 +62,11 @@ export class EmailService {
   async sendAutoReply(formData: ContactForm): Promise<EmailResponse> {
     try {
       const templateParams = {
-        to_name: formData.name,
-        to_email: formData.email,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
         message: formData.message,
+        time: formData.time, 
       };
 
       const response = await emailjs.send(
